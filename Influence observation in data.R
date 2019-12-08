@@ -1,9 +1,5 @@
 mydata = read.csv("C:\\Users\\MKhurram\\Desktop\\stats.csv")
 model = lm(mydata$Scoring.Avg.~mydata$Greens.in.Reg.+mydata$Putting.Avg.)
-par(mfrow=c(0,0))
-plot(model, which=c(1,1))
-library(olsrr)
-ols_plot_resid_stud_fit(model)
 library(ggplot2)
 # find influence observa
 df <- model$df.residual
